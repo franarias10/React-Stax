@@ -1,0 +1,69 @@
+.profileBox{
+  position: absolute;
+  float: right;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  top: 0;
+  border-left: 1px solid #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.img_profile{
+  position: relative;
+  float: left;
+  top: 20%;
+  left: 5%;
+}
+.username{
+  position: relative;
+  float: left;
+  left: 5%;
+  color:#fff;
+  top:30%;
+  font-weight: bold;
+  font-size: 14px;
+  max-width: 100px;
+  min-width: 100px;
+}
+.inbox{
+  position: relative;
+  float: left;
+  left: 85px;
+  color:#fff;
+  cursor: pointer;
+}
+.num_inbox{
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 69%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: red;
+  left: 27px;
+  position: absolute;
+  top: -5px;
+}
+.open_inbox{
+  position: absolute;
+  width: 85%;
+  background-color: #fff;
+  z-index: 1000;
+  top: 83px;
+  box-shadow: 1px 5px 20px 1px;
+  border-radius: 5px;
+  min-height: 100px;
+  transition: top .3s ease-in-out;
+  display: block;
+}
+.open_inbox.close{
+  display: none;
+}

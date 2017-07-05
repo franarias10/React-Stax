@@ -1,0 +1,41 @@
+.header{
+  background-color: #000000;
+  min-height: 90px;
+}
+.logo-header{
+  position: relative;
+  float: left;
+  width: 195px;
+  top: 15%;
+  left: 5%;
+}
+.items-header{
+  color:#ffffff;
+}
+.navbar-menu {
+    align-self: flex-start;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    padding: 0.25rem 0.75rem;
+}
+.btn_menu{
+  margin-top: 60%;
+}
+
+.menu_superior{
+  height: 100%;
+  right: 15%;
+  position: absolute;
+  top: 0;
+}
+.icon_menu_sup{
+  position: relative;
+  float: left;
+  left: 15%;
+}
+.txt_menu_sup{
+  position: relative;
+  float: left;
+  font-size: 16px;
+}

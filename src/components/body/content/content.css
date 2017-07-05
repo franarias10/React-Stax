@@ -1,0 +1,13 @@
+.content {
+  position: fixed;
+  top: 90px;
+  left: 50px;
+  right: 0;
+  height: 100%;
+  transition: left .3s ease-in-out;
+  background-color: #f1f1f1;
+}
+
+.content.open {
+    left: 300px;
+}
