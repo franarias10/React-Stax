@@ -28,7 +28,7 @@ class App extends Component {
         {name: "opcion 5", action: "accion5", icon: icon5}
       ],
       menuSuperior: [
-        {id:1, name: "Sección 1", icon: icon6,action: "opcion 1", active: true},
+        {id:1, name: "Home", icon: icon6,action: "opcion 1", active: true},
         {id:2, name: "Sección 2", icon: icon7,action: "opcion 2", active: false},
         {id:3, name: "Sección 3", icon: icon8,action: "opcion 3", active: false}
       ],
@@ -75,7 +75,6 @@ class App extends Component {
       inboxOpen: !this.state.inboxOpen
     });
   }
-
 
 
   render() {

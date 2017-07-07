@@ -1,11 +1,10 @@
 .header{
-  background-color: #000000;
+  background-color: #ffffff;
   min-height: 90px;
 }
 .logo-header{
   position: relative;
   float: left;
-  width: 195px;
   top: 15%;
   left: 5%;
 }
@@ -38,4 +37,5 @@
   position: relative;
   float: left;
   font-size: 16px;
+  
 }

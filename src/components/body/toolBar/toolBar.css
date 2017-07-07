@@ -11,10 +11,10 @@
   left: -250px;
   height: 100%;
   width: 300px;
-  transition: left .3s ease-in-out;
-  background-color: #262626;
+  transition: all 0.5s ease 0s;
+  background-color: #434343;
   border-right: 0.5px solid #fff;
-  box-shadow: -25px 35px 43px 30px #fff;
+  /*box-shadow: -35px 40px 43px 30px #000;*/
 }
 .toolBar.open {
     left: 0;
