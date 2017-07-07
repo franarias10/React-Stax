@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './content.css';
+import { connect} from 'react-redux';
 
 class content extends Component{
   render(){
@@ -10,4 +11,11 @@ class content extends Component{
   }
 }
 
-export default content;
+
+function mapStateToProps(state, props){
+  return{
+    isOpen:  state.sideBarOpen
+  }
+}
+
+export default connect(mapStateToProps)(content);

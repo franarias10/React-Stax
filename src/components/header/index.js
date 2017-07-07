@@ -1,32 +1,11 @@
 import React, {Component} from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Row,
-  Col,
-  Jumbotron,
-  ButtonGroup,
-  Button,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
+import {Collapse,Navbar,NavbarBrand,Nav,ButtonGroup,Button} from 'reactstrap';
 import './header.css';
 import logo from '../../img/logo.png';
 import ProfileBox from './profileBox';
 
 
-
-
 class Header extends Component {
-
 
   render() {
 
@@ -49,7 +28,7 @@ class Header extends Component {
                   )}
                 </ButtonGroup>
              </div>
-               <ProfileBox userInfo={this.props.userInfo} openInbox={this.props.openInbox}  inboxOpen={this.props.inboxOpen} closeInbox={this.props.closeInbox} />
+               <ProfileBox  />
             </Nav>
           </Collapse>
         </Navbar>
