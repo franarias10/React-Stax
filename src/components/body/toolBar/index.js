@@ -59,8 +59,8 @@ class toolBar extends Component{
   //conectamos el componente solo con los datos que necesitamos
   function mapStateToProps(state, props){
     return{
-    isOpen:  state.sideBarOpen,
-    menu: state.menuToolBar
+    isOpen:  state.uiReducer.sideBarOpen,
+    menu: state.uiReducer.menuToolBar
     }
   }
 

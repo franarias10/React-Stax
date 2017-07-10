@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
-//importamos react-redux
-import {Provider} from 'react-redux';
-import store from './store';
+import {Provider} from 'react-redux';//-->importamos react-redux
+import store from './store';//-->importamos el store
 
 
 ReactDOM.render(
