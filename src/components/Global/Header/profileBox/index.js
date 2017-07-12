@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './profileBox.css';
-import img_profile from '../../../img/img_profile.png';
-import img_inbox from '../../../img/inbox_img.png';
+import img_profile from '../../../../img/img_profile.png';
+import img_inbox from '../../../../img/inbox_img.png';
 import { connect } from 'react-redux'; //<--- importamos  connect para conectar el componente al Store
-import actions from '../../../actions';//<--- importamos las acciones para despacharlas al reducer
+import actions from '../../../../actions/ui';//<--- importamos las acciones para despacharlas al reducer
 
 class profileBox extends Component{
 
@@ -41,8 +41,8 @@ class profileBox extends Component{
 //Le pedimos al store solo los datos que necesitamos
 function mapStateToProps(state, props){
   return{
-  userInfo:  state.userReducer.userInfo,
-  inboxOpen: state.uiReducer.inboxOpen
+  userInfo:  state.user.userInfo,
+  inboxOpen: state.ui.inboxOpen
   }
 }
 

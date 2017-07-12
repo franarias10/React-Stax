@@ -3,7 +3,7 @@ import './toolBar.css';
 import img_open from '../../../img/open.png';
 import img_close from '../../../img/close.png';
 import { connect } from 'react-redux'; //<--- importamos el decorador connect para conectar el componente al Store
-import actions from '../../../actions'; //<--- importamos las acciones para despacharlas al reducer
+import actions from '../../../actions/ui'; //<--- importamos las acciones para despacharlas al reducer
 
 class toolBar extends Component{
 
@@ -59,8 +59,8 @@ class toolBar extends Component{
   //conectamos el componente solo con los datos que necesitamos
   function mapStateToProps(state, props){
     return{
-    isOpen:  state.uiReducer.sideBarOpen,
-    menu: state.uiReducer.menuToolBar
+    isOpen:  state.ui.sideBarOpen,
+    menu: state.ui.menuToolBar
     }
   }
 

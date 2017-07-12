@@ -3,6 +3,6 @@ import uiReducer from './uiReducer';
 import userReducer from './userReducer';
 
 export default combineReducers({
-  uiReducer,
-  userReducer
+  ui: uiReducer,
+  user: userReducer
 });

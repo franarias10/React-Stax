@@ -1,0 +1,9 @@
+.contenido {
+  position: fixed;
+  top: 90px;
+  left: 0px;
+  right: 0;
+  height: 100%;
+  transition: all 0.5s ease 0s;
+  background-color: #f1f1f1;
+}

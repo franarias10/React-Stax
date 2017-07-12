@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import './content.css';
+import './home.css';
 import { connect} from 'react-redux';
 
 class content extends Component{
+
+
   render(){
-    var contentClass = this.props.isOpen ? 'content open' : 'content';
     return(
-      <div className={contentClass}>Acá va todo el contenido</div>
+      <div className="contenido">
+        <h2>Modulo home</h2>
+      </div>
     );
   }
 }
@@ -14,7 +17,7 @@ class content extends Component{
 
 function mapStateToProps(state, props){
   return{
-    isOpen:  state.sideBarOpen
+    isOpen:  state.ui.sideBarOpen
   }
 }
 

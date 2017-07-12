@@ -1,4 +1,3 @@
-//****************Action Creators************************************
 
 
 //*******ToolBox actions **************
@@ -33,11 +32,13 @@ function changeOpMenu(id){
     id: id
   }
 }
-//**********************************
+
 
 export default {
   openSideBar,
   autoCloseSideBar,
   openInbox,
   closeInbox,
-  changeOpMenu};
+  changeOpMenu,
+}
+//**********************************
