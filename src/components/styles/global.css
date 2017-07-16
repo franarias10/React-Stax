@@ -1,0 +1,74 @@
+.contenido {
+  position: fixed;
+  top: 90px;
+  left: 0px;
+  right: 0;
+  height: 100%;
+  transition: all 0.5s ease 0s;
+  background-color: #f1f1f1;
+}
+
+.black_overlay_load{
+            display: block;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:10000;
+            
+            cursor: progress;
+        }
+.white_content_load {
+    display: block;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    margin-left: -85px;
+    width: 170px;
+    height: 120px;
+    padding: 16px;
+    border: 0px solid;
+    background-color: transparent;
+    z-index: 10002;
+    overflow: auto;
+    cursor: progress;
+    color: #00b9da;
+}
+
+.black_overlay{
+            display: block;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:10000;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=80);
+            cursor: progress;
+        }
+.white_content {
+    display: block;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    margin-left: -85px;
+    width: 170px;
+    height: 120px;
+    padding: 16px;
+    border: 0px solid;
+    background-color: white;
+    z-index: 10002;
+    overflow: auto;
+    cursor: progress;
+    color: #00b9da;
+}
+
+.error_msg{
+  font-size: 14px;
+  color:red;
+}

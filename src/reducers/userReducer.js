@@ -2,15 +2,23 @@
 
 //initial state of the APP
 const initialState = {
-  userInfo: {id:null,name:null, inbox:null}
+  dataUser: {userInfo:{},loading:true,error:null, inbox: 0}
 }
 
 
 function userReducer(state =  initialState, action = {}){
+
   switch (action.type ) {
     case 'fetch_user_data':
-          return {...state, userInfo: action.userInfo}
+          return {...state, dataUser: { userInfo:{},loading:true,error:null, inbox: 0 }}
       break;
+      case 'fetch_user_data_succes':
+          return {...state, dataUser: {userInfo: action.payload, loading: false, error: null, inbox: 34}}
+        break;
+      case 'fetch_user_data_error':
+          return {...state, dataUser: {userInfo: {}, loading: false, error: action.payload, inbox: 0}}
+        break;
+
     default:
 
   }
