@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.5.4",
+    "react-bootstrap-table": "^3.4.6",
     "react-dom": "^15.5.4",
     "react-iframe": "^1.0.7",
     "react-redux": "^5.0.5",

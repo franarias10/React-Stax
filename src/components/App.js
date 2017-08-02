@@ -1,6 +1,7 @@
 //dependencies
 import React, {Component} from 'react';
 import './styles/global.css';
+import './styles/App.css';
 import logo from '../img/logo.png';
 
 class App extends Component {
@@ -10,13 +11,12 @@ class App extends Component {
 
     if (this.props.dataUser.userInfo = {} ) {
       this.props.fetchUserData();
-      //alert('se cargo data de user');
     }
   }
 
 
   render() {
-    const { loading, error } = this.props.dataUser;
+    const { loading,error } = this.props.dataUser;
 
     if(loading) {
       return(

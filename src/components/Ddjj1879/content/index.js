@@ -11,7 +11,6 @@ class content extends Component{
   }
 }
 
-
 function mapStateToProps(state, props){
   return{
     isOpen:  state.ui.sideBarOpen

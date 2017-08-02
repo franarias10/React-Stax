@@ -14,9 +14,9 @@ const initialState = {
   inboxOpen:false,
   sideBarOpen: false,
   menuSuperior: [
-    {id:1, name: "Home", icon: icon6,action: "/app", active: true},
-    {id:2, name: "Contribuyentes", icon: icon7,action: "/app/contribuyentes", active: false},
-    {id:3, name: "Sección 3", icon: icon8,action: "/app/ddjj", active: false}
+    {id:1, name: "Home", icon: icon6,action: "/app", active: true, visible: true},
+    {id:2, name: "Contribuyentes", icon: icon7,action: "/app/contribuyentes", active: false, visible: true},
+    {id:3, name: "Sección 3", icon: icon8,action: "/app/ddjj", active: false, visible: true},
   ],
   menuToolBar: [
     {name: "opcion 1", action: "accion1", icon: icon1},

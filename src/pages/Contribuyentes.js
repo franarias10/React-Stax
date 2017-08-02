@@ -7,7 +7,7 @@ class Contribuyentes extends Component {
     return (
       <div>
         <HeaderContainer />
-        <ContribuyentesContainer />
+        <ContribuyentesContainer history={this.props.history}/>
       </div>
     );
   }

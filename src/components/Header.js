@@ -4,24 +4,10 @@ import './styles/header.css';
 import logo from '../img/logo.png';
 import img_profile from '../img/img_profile.png';
 import img_inbox from '../img/inbox_img.png';
-import UiActions from '../actions/ui';//<--- importamos las acciones para despacharlas al reducer
-import UserActions from '../actions/user';
 import { Link } from 'react-router-dom';
 
 
 class Header extends Component {
-
-  changeOpMenu = (id) =>{
-    this.props.dispatch(UiActions.changeOpMenu(id));
-  }
-
-  openInbox(){
-  this.props.dispatch(UiActions.openInbox());
-  }
-
-  closeInbox(){
-    this.props.dispatch(UiActions.closeInbox());
-  }
 
 
   render() {
@@ -31,7 +17,7 @@ class Header extends Component {
     return(
       <div>
         <Navbar className="header" light toggleable>
-          <NavbarBrand href="/">
+          <NavbarBrand href="/app">
             <img className="logo-header" src={logo}/>
           </NavbarBrand>
           <Collapse style={{width: '5%'}}  navbar>
@@ -40,8 +26,8 @@ class Header extends Component {
                 <ButtonGroup size="lg" style={{height: '100%'}}>
                   {this.props.menuSuperior.map(menu =>
                     <Link to={menu.action}>
-                      <Button  active={menu.active} onClick={this.changeOpMenu.bind(null,menu.id)} >
-                          <img className="icon_menu_sup" src={menu.icon}/>
+                      <Button  active={menu.active} onClick={this.props.changeOpMenu.bind(null,menu.id)} >
+                          <img src={menu.icon}/>
                           <div className="clearfix"></div>
                           <div className="txt_menu_sup">{menu.name}</div>
                         </Button>
@@ -59,11 +45,11 @@ class Header extends Component {
                      {this.props.dataUser.userInfo.apellido}
                    </div>
                    <div className="clearfix"></div>
-                   <div className="inbox" onMouseOver={() => this.openInbox()} onClick={() => this.closeInbox()}>
+                   <div className="inbox" onMouseOver={() => this.props.openInbox()} onClick={() => this.props.closeInbox()}>
                      <span className="num_inbox">{this.props.dataUser.inbox}</span>
                      <img style={{width:"30%"}} src={img_inbox}></img>
                    </div>
-                   <div className={open_inbox} onMouseLeave={() => this.closeInbox()}>
+                   <div className={open_inbox} onMouseLeave={() => this.props.closeInbox()}>
                      Cargando...
                    </div>
                  </div>
