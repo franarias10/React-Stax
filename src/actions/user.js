@@ -89,6 +89,21 @@ function fetchContribuyentesError(){
 }
 //*************FIN Traer data de contribuyentes***********************************************
 
+//*******************edit contribuyente*************************************
+function editContribuyente(value,idContribuyente){
+  //const request = axios.get(`${ROOT_URL}/users/read_userInfo.php`);
+
+   return{
+     type:'edit_contribuyente',
+     payload: {
+       infoEdited: value,
+       idContribuyente: idContribuyente
+     }
+   }
+}
+
+
+//*****************************************************************************
 
 export default {
   fetchUserData,
@@ -99,5 +114,6 @@ export default {
   fetchContribuyentesSucces,
   fetchLicenciasUser,
   fetchLicenciasUserSucces,
-  fetchLicenciasError
+  fetchLicenciasError,
+  editContribuyente
 }

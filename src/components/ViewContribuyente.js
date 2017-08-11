@@ -9,13 +9,21 @@ import logo from '../img/logo.png';
 
 class ViewContribuyente extends Component {
 
+
+
   //cargamos data de user solo si no se ha cargado antes...  si server devuelve false redirigir a pagina de login
-  componentWillMount(){
+  componentDidMount(){
       //this.props.fetchContribuyentes();
   }
 
+
   fetchInfoContribuyente(){
     const idContribuyente = this.props.idContribuyente;
+    //funcion para editar contribuyente
+    const editContribuyente = (e) =>{
+      const value = e.target.value;
+      this.props.editContribuyente(value,idContribuyente);
+    }
 
       return(
         this.props.contribuyentes.data.filter(contribuyente =>
@@ -32,7 +40,7 @@ class ViewContribuyente extends Component {
              <FormGroup row>
                <Label sm={4}>RAZÓN SOCIAL O APELLIDO PATERNO</Label>
                <Col sm={8}>
-                 <Input type="text" name="r_social_ap_pat" id="r_social_ap_pat" placeholder="ingrese razón social o apellido paterno" defaultValue={contribuyente.r_social_ap_paterno} />
+                 <Input onBlur={editContribuyente} type="text" name="r_social_ap_pat" id="r_social_ap_pat" placeholder="ingrese razón social o apellido paterno" defaultValue={contribuyente.r_social_ap_paterno} />
                </Col>
              </FormGroup>
              <FormGroup row>
@@ -139,7 +147,6 @@ class ViewContribuyente extends Component {
 
 
   render() {
-
 
   return (
     <div className="contenido">

@@ -13,7 +13,7 @@ import { Link  } from 'react-router-dom';
 class Contribuyentes extends Component {
 
   //cargamos data de contribuyentes solo si no se ha cargado antes
-  componentWillMount(){
+  componentDidMount(){
     if (this.props.contribuyentes.data === null ) {
       this.props.fetchContribuyentes();
     }

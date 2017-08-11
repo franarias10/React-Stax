@@ -7,8 +7,7 @@ import logo from '../img/logo.png';
 class App extends Component {
 
   //cargamos data de user solo si no se ha cargado antes...  si server devuelve false redirigir a pagina de login
-  componentWillMount(){
-
+  componentDidMount(){
     if (this.props.dataUser.userInfo = {} ) {
       this.props.fetchUserData();
     }

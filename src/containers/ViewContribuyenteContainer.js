@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ViewContribuyente from '../components/ViewContribuyente';
-//import actions from '../actions/user.js';
+import actions from '../actions/user.js';
 
 
 function mapStateToProps(state) {
@@ -10,5 +10,17 @@ function mapStateToProps(state) {
 }
 
 
+function mapDispatchToProps(dispatch){
+  return {
+    editContribuyente: (value,idContribuyente) => {
+      dispatch(actions.editContribuyente(value,idContribuyente));
+    }
 
-export default connect(mapStateToProps)(ViewContribuyente);
+  }
+}
+
+
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(ViewContribuyente);

@@ -40,6 +40,22 @@ function userReducer(state =  initialState, action = {}){
         case 'fetch_contribuyentes_error':
             return {...state, contribuyentes: {data: {}, loading: false, error: action.payload}}
         break;
+        //************Edit contribuyente***********
+        case 'edit_contribuyente':
+        return Object.assign({}, state, {
+          contribuyentes:{
+            data: state.contribuyentes.data.map((contribuyente) => {
+              if(contribuyente.id === action.payload.idContribuyente) {
+                return Object.assign({}, contribuyente, {
+                  r_social_ap_paterno: action.payload.infoEdited
+                })
+              }
+              return contribuyente
+            })
+          }
+        })
+        break;
+        //*****************************************
 
 
     default:
