@@ -89,18 +89,56 @@ function fetchContribuyentesError(){
 }
 //*************FIN Traer data de contribuyentes***********************************************
 
-//*******************edit contribuyente*************************************
-function editContribuyente(value,idContribuyente){
+//*******************change data contribuyente*************************************
+function onRazonSocChange(value,idContribuyente){
   //const request = axios.get(`${ROOT_URL}/users/read_userInfo.php`);
 
    return{
-     type:'edit_contribuyente',
+     type:'edit_rzon_soc',
      payload: {
        infoEdited: value,
        idContribuyente: idContribuyente
      }
    }
 }
+
+function onRegionChange(value,idContribuyente){
+  //const request = axios.get(`${ROOT_URL}/users/read_userInfo.php`);
+
+   return{
+     type:'edit_region',
+     payload: {
+       infoEdited: value,
+       idContribuyente: idContribuyente
+     }
+   }
+}
+
+function onActEconChange(value,idContribuyente){
+  //const request = axios.get(`${ROOT_URL}/users/read_userInfo.php`);
+
+   return{
+     type:'edit_act_econ',
+     payload: {
+       infoEdited: value,
+       idContribuyente: idContribuyente
+     }
+   }
+}
+
+function onCodActEconChange(value,idContribuyente){
+  //const request = axios.get(`${ROOT_URL}/users/read_userInfo.php`);
+
+   return{
+     type:'edit_cod_act_econ',
+     payload: {
+       infoEdited: value,
+       idContribuyente: idContribuyente
+     }
+   }
+}
+
+
 
 
 //*****************************************************************************
@@ -115,5 +153,8 @@ export default {
   fetchLicenciasUser,
   fetchLicenciasUserSucces,
   fetchLicenciasError,
-  editContribuyente
+  onRazonSocChange,
+  onRegionChange,
+  onActEconChange,
+  onCodActEconChange
 }

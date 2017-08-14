@@ -5,15 +5,28 @@ import actions from '../actions/user.js';
 
 function mapStateToProps(state) {
   return {
-      contribuyentes:  state.user.contribuyentes
+      contribuyentes:  state.user.contribuyentes,
+      bancos: state.user.bancos,
+      comunas: state.user.comunas,
+      regiones: state.user.regiones,
+      cod_act_econ: state.user.cod_act_econ
   };
 }
 
 
 function mapDispatchToProps(dispatch){
   return {
-    editContribuyente: (value,idContribuyente) => {
-      dispatch(actions.editContribuyente(value,idContribuyente));
+    onRazonSocChange: (value,idContribuyente) => {
+      dispatch(actions.onRazonSocChange(value,idContribuyente));
+    },
+    onRegionChange: (value,idContribuyente) => {
+      dispatch(actions.onRegionChange(value,idContribuyente));
+    },
+    onActEconChange: (value,idContribuyente) => {
+      dispatch(actions.onActEconChange(value,idContribuyente));
+    },
+    onCodActEconChange: (value,idContribuyente) => {
+      dispatch(actions.onCodActEconChange(value,idContribuyente));
     }
 
   }
