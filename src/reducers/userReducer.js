@@ -5,6 +5,11 @@ const initialState = {
   dataUser: {userInfo:{},loading:true,error:null, inbox: 0,licencias:[]},
   contribuyentes:{data:null,loading:true,error:null},
   //data contribuyentes
+
+  // tipo cuenta bancaria
+  tpo_cta:[{id:"1", tipo:"CUENTA DE AHORRO"}, {id:"2",tipo:"CUENTA VISTA"},{id:"3", tipo:"CUENTA CORRIENTE"},{id:"4",tipo: "CUENTA RUT"}],
+
+  //bancos
   bancos: [{id:"1",nombre:"CHILE EDWARDS"}, {id:"2",nombre:"ABNAMRO"}, {id:"3",nombre:"AMERICAN EXPRESS"},
    {id:"4",nombre:"BANK BOSTON ASSOCIATION"}, {id:"5",nombre:"OF AMERICA"}, {id:"6",nombre:"BBVA"},
    {id:"7",nombre:"BICE"}, {id:"8",nombre:"CITYBANK"}, {id:"9",nombre:"CORPBANCA"}, {id:"10",nombre:"CHILE"},
@@ -14,6 +19,7 @@ const initialState = {
    {id:"23",nombre:"SECURITY"}, {id:"24",nombre:"SIN BANCO"}, {id:"25",nombre:"SUDAMERIS"}, {id:"26",nombre:"TOKYO"},
    {id:"27",nombre:"CHASE"}, {id:"28",nombre:"SCOTIABANK"}, {id:"29",nombre:"HSBC"}, {id:"30",nombre:"TBANK"}, {id:"31",nombre:"ITAU"}],
 
+   //comunas
    comunas: [{id:"353",cod_region:"15",cod_comuna:"1101",nombre:"ARICA"}, {id:"354",cod_region:"15",cod_comuna:"1106",nombre:"CAMARONES"}, {id:"355",cod_region:"15",cod_comuna:"1301",nombre:"PUTRE"},
     {id:"356",cod_region:"15",cod_comuna:"1302",nombre:"GENERAL LAGOS"}, {id:"357",cod_region:"1",cod_comuna:"1201",nombre:"IQUIQUE"}, {id:"358",cod_region:"1",cod_comuna:"1203",nombre:"PICA"},
     {id:"359",cod_region:"1",cod_comuna:"1204",nombre:"POZO ALMONTE"}, {id:"360",cod_region:"1",cod_comuna:"1206",nombre:"HUARA"}, {id:"361",cod_region:"1",cod_comuna:"1208",nombre:"CAMINA"},
@@ -419,7 +425,7 @@ function userReducer(state =  initialState, action = {}){
             return {...state, contribuyentes: {data: {}, loading: false, error: action.payload}}
         break;
         //************change rzon_soc***********
-        case 'edit_rzon_soc':
+        case 'edit_contribuyente':
         return Object.assign({}, state, {
           contribuyentes:{
             data: state.contribuyentes.data.map((contribuyente) => {

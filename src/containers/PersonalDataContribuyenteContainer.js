@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ViewContribuyente from '../components/ViewContribuyente';
+import PersonalDataContribuyente from '../components/PersonalDataContribuyente';
 import actions from '../actions/user.js';
 
 
@@ -9,15 +9,16 @@ function mapStateToProps(state) {
       bancos: state.user.bancos,
       comunas: state.user.comunas,
       regiones: state.user.regiones,
-      cod_act_econ: state.user.cod_act_econ
+      cod_act_econ: state.user.cod_act_econ,
+      tipo_cuenta_bancaria: state.user.tpo_cta
   };
 }
 
 
 function mapDispatchToProps(dispatch){
   return {
-    onRazonSocChange: (value,idContribuyente) => {
-      dispatch(actions.onRazonSocChange(value,idContribuyente));
+    editContribuyente: (ap_materno,rzon_soc,idContribuyente) => {
+      dispatch(actions.editContribuyente(ap_materno,rzon_soc,idContribuyente));
     },
     onRegionChange: (value,idContribuyente) => {
       dispatch(actions.onRegionChange(value,idContribuyente));
@@ -36,4 +37,4 @@ function mapDispatchToProps(dispatch){
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(ViewContribuyente);
+export default connect(mapStateToProps,mapDispatchToProps)(PersonalDataContribuyente);
