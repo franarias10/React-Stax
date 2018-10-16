@@ -17,7 +17,7 @@ class Header extends Component {
     return(
       <div>
         <Navbar className="header" light toggleable>
-          <NavbarBrand href="/app">
+          <NavbarBrand href="/">
             <img className="logo-header" src={logo}/>
           </NavbarBrand>
           <Collapse style={{width: '5%'}}  navbar>

@@ -26,7 +26,7 @@ class ModulesHome extends Component {
         {
           if (licencia.modulo === '1' && licencia.activa === '1') {
             return (
-              <Link key={licencia.id} to="/app/dj1879">
+              <Link key={licencia.id} to="/dj1879">
                 <div  className="img_module_soft">
                   <img src={imgDj1879} />
                 </div>
@@ -35,7 +35,7 @@ class ModulesHome extends Component {
           }
           if (licencia.modulo === '2' && licencia.activa === '1') {
             return (
-              <Link key={licencia.id} to="/app/dj1879">
+              <Link key={licencia.id} to="/dj1879">
                 <div  className="img_module_soft">
                   <img src={imgDj1847} />
                 </div>

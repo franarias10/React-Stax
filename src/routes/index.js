@@ -17,14 +17,14 @@ import Page404 from '../pages/Page404';
 const AppRoutes = () =>
 
 <App>
-<Switch>
-  <Route exact path="/" component={Home}/>
-  <Route exact path="/contribuyentes" component={Contribuyentes} />
-  <Route exact path="/contribuyentes/contribuyente/:id" component={ViewContribuyente} />
-  <Route exact path="/contribuyentes/crear_contribuyente" component={CrearContribuyente} />
-  <Route exact path="/dj1879" component={Dj1879} />
-  <Route component={Page404} />
-</Switch>
+  <Switch>
+    <Route exact path="/" component={Home}/>
+    <Route exact path="/contribuyentes" component={Contribuyentes} />
+    <Route exact path="/contribuyentes/contribuyente/:id" component={ViewContribuyente} />
+    <Route exact path="/contribuyentes/crear_contribuyente" component={CrearContribuyente} />
+    <Route exact path="/dj1879" component={Dj1879} />
+    <Route component={Page404} />
+  </Switch>
 </App>
 
 
