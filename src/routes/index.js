@@ -18,11 +18,11 @@ const AppRoutes = () =>
 
 <App>
 <Switch>
-  <Route exact path="/app" component={Home}/>
-  <Route exact path="/app/contribuyentes" component={Contribuyentes} />
-  <Route exact path="/app/contribuyentes/contribuyente/:id" component={ViewContribuyente} />
-  <Route exact path="/app/contribuyentes/crear_contribuyente" component={CrearContribuyente} />
-  <Route exact path="/app/dj1879" component={Dj1879} />
+  <Route exact path="/" component={Home}/>
+  <Route exact path="/contribuyentes" component={Contribuyentes} />
+  <Route exact path="/contribuyentes/contribuyente/:id" component={ViewContribuyente} />
+  <Route exact path="/contribuyentes/crear_contribuyente" component={CrearContribuyente} />
+  <Route exact path="/dj1879" component={Dj1879} />
   <Route component={Page404} />
 </Switch>
 </App>
