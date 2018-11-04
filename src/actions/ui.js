@@ -13,6 +13,7 @@ function autoCloseSideBar(){
   };
 }
 //**********************************
+
 //******header actions**************
 function openInbox(){
   return{
